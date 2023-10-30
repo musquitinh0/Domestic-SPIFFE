@@ -1,6 +1,6 @@
 import random
 from flask import jsonify, request, Blueprint
-from flask_jwt_extended import create_access_token
+from flask_jwt_extended import create_access_token, get_jwt_identity, jwt_required
 from flask_cors import cross_origin
 
 users = []
@@ -61,3 +61,10 @@ def login():
     access_token = access_token = create_access_token(identity=user.id)
 
     return jsonify({'access_token': access_token}), 200
+
+@auth_routes.route('/dados', methods=['GET'])
+@cross_origin()
+@jwt_required()
+def getDados():
+    current_user_id = get_jwt_identity()
+    return jsonify({'data': users[current_user_id]})
