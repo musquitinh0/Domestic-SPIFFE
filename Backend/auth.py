@@ -38,7 +38,6 @@ def register():
     return jsonify({'message': 'cadastro feito'}), 20
 
 
-
 @auth_routes.route('/login', methods=['POST'])
 @cross_origin()
 def login():

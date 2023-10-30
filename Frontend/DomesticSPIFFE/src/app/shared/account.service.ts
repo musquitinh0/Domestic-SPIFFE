@@ -20,6 +20,10 @@ export class AccountService {
     return false;
   }
 
+  async register(user: any) {
+    const result = await this.http.post<any>(`${environment.api}/register`, user).toPromise();
+  }
+
   getAuthorizationToken(){
     const token = window.localStorage.getItem('token');
     return token;

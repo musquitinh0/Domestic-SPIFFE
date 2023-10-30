@@ -11,7 +11,12 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
   login = {
     email: '',
-    password: '',
+    password: ''
+  };
+
+  register = {
+    email: '',
+    password: ''
   };
 
   modal = false;
@@ -35,4 +40,13 @@ export class LoginComponent implements OnInit {
         alert(tipoError);
       }
   }
+
+  async onSubmitRegister() {
+    try {
+      await this.accountService.register(this.register);
+    } catch (error:any) {
+      const tipoError = await error.error;
+      alert(tipoError);
+    }
+}
 }

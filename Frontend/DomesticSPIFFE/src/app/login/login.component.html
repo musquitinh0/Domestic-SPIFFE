@@ -1,5 +1,4 @@
 <div class="login-screen">
-  <div class="right">
     <form class="login-box" (ngSubmit)="onSubmit()" #form="ngForm">
       <h1>Login</h1>
       <div class="text-box">
@@ -12,5 +11,16 @@
       </div>
       <button type="submit" [disabled]="form.form.invalid">Login</button>
     </form>
-  </div>
+    <form class="login-box" (ngSubmit)="onSubmitRegister()" #form="ngForm">
+      <h1>Registrar</h1>
+      <div class="text-box">
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="Insira o seu email"  type="email" [(ngModel)]="register.email" required>
+      </div>
+      <div class="text-box">
+        <label for="senha">Senha</label>
+        <input id= "senha" name = "senha" placeholder="Insira a sua senha" required type="password" [(ngModel)]="register.password">
+      </div>
+      <button type="submit" [disabled]="form.form.invalid">Login</button>
+    </form>
 </div>
