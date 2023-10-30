@@ -1,0 +1,234 @@
+.login-screen > *{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+.header{
+    background-color: rgba(0, 112, 192, 1);
+    height: 10vh;
+    width: 100vw;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+}
+
+.header > a{
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 2%;
+}
+
+.header > a > img{
+    height: 60%;
+    filter: invert(100%);
+}
+
+.login-screen{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.left{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 50%;
+    justify-content: center;
+    margin: 0;
+    height: 100%;
+}
+
+.left > img{
+    width: 70%;
+}
+
+.line{
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.line > h1{
+    padding: 0%;
+    margin: 0%;
+    font-family: 'MyFont';
+    font-size: 80px;
+    font-weight: 900;
+    letter-spacing: -5px;
+}
+
+.right{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+}
+
+.login-box{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: white;
+    border-radius: 15px;
+    margin: 10%;
+    padding: 5%;
+    box-shadow: 0 2px 8px #333;
+}
+
+.text-box{
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    margin-top: 5%;
+}
+
+.text-box > label{
+    align-self: flex-start;
+}
+
+.text-box > input{
+    width: 100%;
+    height: 50px;
+    border-style:ridge;
+    border-color:rgba(240, 255, 255, 0.479) ;
+    border-radius: 10px;
+    font-size: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.login-box > button{
+    margin-top: 7%;
+    background-color: rgba(255, 220, 99, 1);
+    width: 70%;
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.login-box > button:hover{
+    background-color: rgba(255, 220, 99, .7);
+    cursor: pointer;
+}
+
+.remember-me-container{
+    color: rgb(134, 134, 134);
+    margin-top: 2%;
+    display: flex;
+    width: 80%;    
+    justify-content: space-between;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.remember-me-container > a{
+    color: black;
+}
+
+.login-foot{
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 800px){
+    .login-screen{
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .header{
+        height: 5vh;
+    }
+
+    .right{
+        width: 100%;
+        margin-top: 2%;
+    }
+
+    .left{
+        display: flex;
+        width: 100%;
+        margin: 0;
+        height: 30%;
+    }
+
+    .line > h1{
+        font-size: 0px;
+    }
+
+    .login-box{
+        width: 100%;
+        margin: 2%;
+        background-color: white;
+        box-shadow: none;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .login-box > h1{
+        margin: 0;
+    }
+
+    .text-box{
+        width: 95%;
+    }
+
+    .remember-me-container{
+        width: 95%;
+        font-size: 80%;
+    }
+}
+
+.modal-confirmacao{
+    display: flex;
+    transform: translate(-50%, -50%);
+    background-color: rgb(179, 179, 179);
+    position: absolute;
+    z-index: 5;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 15px;
+    left: 50%;
+    top: 50%;
+    padding: 5%;
+    width: 70%;
+    box-shadow: 0 2px 8px #333;
+}
+
+.form-confirmacao > input {
+    width: 100%;
+    height: 65px;
+    border-style:ridge;
+    border-color:rgba(240, 255, 255, 0.479) ;
+    border-radius: 10px;
+    font-size: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.form-confirmacao > button{
+    margin-top: 7%;
+    background-color: rgba(98, 151, 255, 1);
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    height: 50px;
+}
